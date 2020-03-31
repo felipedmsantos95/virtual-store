@@ -1,0 +1,19 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "Backend for virtual store products",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/felipedmsantos95/virtual-store.git"
+  },
+  "author": "Felipe Santos",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/felipedmsantos95/virtual-store/issues"
+  },
+  "homepage": "https://github.com/felipedmsantos95/virtual-store#readme"
+}
