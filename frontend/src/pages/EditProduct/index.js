@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiArrowLeft } from 'react-icons/fi';
 
@@ -7,14 +7,24 @@ import api from '../../services/api';
 import './styles.css';
 import logoImg  from '../../assets/logo.svg';
 
-export default function NewIncident(){
+export default function NewProduct(){
     const [title, setTitle] = useState('');
     const [description, setDescription] = useState('');
     const [value, setValue] = useState('');
-    const ongId = localStorage.getItem('ongId');
     const history = useHistory()
+    const productId = localStorage.getItem('productId');
+    
 
-    async function handleNewIncident(e){
+    useEffect(() => {
+        api.get('product/' + productId ).then( response => {
+            setTitle(response.data.title);
+            setDescription(response.data.description);
+            setValue(response.data.value);
+        })
+    }, [productId])
+    
+    
+    async function handleEditProduct(e){
         e.preventDefault();
 
         const data = {
@@ -24,17 +34,13 @@ export default function NewIncident(){
         }
 
         try{
-            await api.post('incidents', data, {
-                headers: {
-                    authorization: ongId
-                }
-            })
+            await api.put('products/' + productId, data)
 
-            history.push('/profile');
-            alert('O caso foi cadastrado com sucesso!')
+            history.push('/');
+            alert('O produto foi editado com sucesso!')
 
         } catch {
-            alert('Erro ao cadastrar caso, tente novamente.')
+            alert('Por favor, verifique se preencheu todos os campos de forma correta e tente novamente.')
         }
     }
 
@@ -42,24 +48,24 @@ export default function NewIncident(){
         <div className="new-incident-container">
             <div className="content">
                 <section>
-                    <img src={logoImg} alt="Be The Hero"/>
-                    <h1>Cadastrar novo caso</h1>
-                    <p>Descreva o caso detalhadamente para encontrar um herói para resolver isso.</p>
+                    <img src={logoImg} alt="Virtual Store"/>
+                    <h1>Editar produto</h1>
+                    <p>Edite as informações do produto ao lado.</p>
 
-                    <Link className="back-link" to="/profile"> 
-                        <FiArrowLeft size={16} color="#E02041"/>
-                        Voltar para home
+                    <Link className="back-link" to="/"> 
+                        <FiArrowLeft size={16} color="#e63a27"/>
+                        Voltar e cancelar edições
                     </Link>                    
                 </section>
 
-                <form onSubmit={handleNewIncident}>
+                <form onSubmit={handleEditProduct}>
                     <input 
-                        placeholder="Título do caso"
+                        placeholder="Nome do produto"
                         value={title}
                         onChange={e => setTitle(e.target.value)}
                     />
                     <textarea 
-                        placeholder="Descrição"
+                        placeholder="Descrição do produto"
                         value={description}
                         onChange={e => setDescription(e.target.value)}
                     />
@@ -69,7 +75,7 @@ export default function NewIncident(){
                         onChange={e => setValue(e.target.value)}
                     />
 
-                    <button className="button" type="submit">Cadastrar</button>
+                    <button className="button" type="submit">Salvar Edição</button>
                 </form>
             </div>
         </div>

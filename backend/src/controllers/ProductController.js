@@ -4,14 +4,10 @@ module.exports = {
 
 	async index(request, response) {
 
-		const {page = 1} = request.query
-
 		const [count] =  await connection('products')
 							 .count()
 
 		const products = await connection('products')
-								.limit(5)
-								.offset((page - 1) * 5)
 								.select(['products.*'])
 
 		response.header('X-Total-Count', count['count(*)'])
@@ -19,6 +15,17 @@ module.exports = {
 		return response.json(products)
 	},
 
+	async productInfo(request, response) {
+		const { id } = request.params
+
+		const product = await connection('products')
+								.where('id', id)
+								.first()
+		if(!product)
+			return response.status(400).json({error: "Não existe um produto com o id informado."})
+
+		response.json(product)
+	},
 
 
 	async create(request, response) {

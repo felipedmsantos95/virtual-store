@@ -59,12 +59,30 @@
     position: relative;
 }
 
-.profile-container ul li button {
+.profile-container ul li .button-delete {
+    position: absolute;
+    right: 24px;
+    top: 144px; 
+    background: #FFF;
+    border: 0;
+}
+
+.profile-container ul li .button-edit {
     position: absolute;
     right: 24px;
     top: 24px;
+    background: #FFF;
     border: 0;
 }
+
+/* .button-texts {
+    margin-left: 2px;
+    margin-top: 50%;
+    color: #737380;
+    line-height: 21px;
+    font-size: 14px;
+} */
+
 
 .profile-container ul li button:hover {
     opacity: 0.8;
@@ -85,3 +103,54 @@
      line-height: 21px;
      font-size: 16px;
 }
+
+.modal-button-yes {
+    width: 40%;
+    height: 60px;
+    background: #e63a27;
+    border: 0;
+    border-radius: 8px;
+    color: #FFF;
+    font-weight: 700;
+    margin-top: 16px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    transition: filter 0.4s;
+}
+
+.modal-button-no {
+    width: 40%;
+    height: 60px;
+    background: #e63a27;
+    border: 0;
+    border-radius: 8px;
+    color: #FFF;
+    font-weight: 700;
+    margin-top: 16px;
+    display: inline-block;
+    text-align: center;
+    text-decoration: none;
+    font-size: 18px;
+    line-height: 60px;
+    transition: filter 0.4s;
+    margin-right: 20%;
+}
+
+
+
+
+
+.modal-button-no:hover , .modal-button-yes:hover {
+    filter: brightness(70%);
+}
+
+.modal-question{
+    color: #41414d;
+    line-height: 21px;
+    font-size: 24px;
+}
+
+

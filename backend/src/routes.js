@@ -5,6 +5,15 @@ const ProductController = require('./controllers/ProductController')
 
 const routes = express.Router()
 
+
+//To list only one product
+routes.get('/product/:id', celebrate({
+    [Segments.PARAMS]: Joi.object().keys({
+        id: Joi.number().required(),
+    })
+}), ProductController.productInfo)
+
+
 //To list products
 routes.get('/products', ProductController.index)
 
