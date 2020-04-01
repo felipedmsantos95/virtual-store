@@ -26,7 +26,7 @@ Consiste em uma aplicação web onde há um CRUD de um recurso chamado produto, 
 
 		npm i
 
-2. Uma vez instaladas as dependências, pelo comando abaixo é possível executar o backend da aplicação:
+2. Uma vez instaladas as dependências, pelo comando abaixo é possível executar o backend da aplicação, por padrão ele estará disponpivel para requisições através da porta 3333:
 
 		npm start
 
@@ -49,6 +49,8 @@ Com o backend sendo executado, pode-se executar os passos abaixo para rodar o fr
 
 		yarn start
 
+3. Feito isso, através de um navegador de internet (preferencialmente o Chrome ou o Firefox), através do endereço abaixo, será possível interagir com a aplicação desenvolvida.
 
+		http://localhost:3000/
 
 
