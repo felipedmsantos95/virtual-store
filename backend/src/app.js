@@ -1,8 +1,9 @@
+//To import and use middlewares and modules
+
 const express = require('express')
 const routes = require('./routes')
 const morgan = require('morgan')
 const cors = require('cors')
-
 const { errors } = require('celebrate')
 
 
