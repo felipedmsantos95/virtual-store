@@ -45,7 +45,7 @@ Com o backend sendo executado, pode-se executar os passos abaixo para rodar o fr
 
 		yarn install
 
-2. Uma vez instaladas as dependências, pelo comando abaixo é possível executar o backend da aplicação:
+2. Uma vez instaladas as dependências, pelo comando abaixo é possível executar o frontend da aplicação:
 
 		yarn start
 
