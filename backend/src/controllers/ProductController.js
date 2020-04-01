@@ -1,5 +1,7 @@
 const connection = require('../database/connection')
 
+//Functions tht controls the api routes
+
 module.exports = {
 
 	async index(request, response) {
