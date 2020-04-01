@@ -26,7 +26,7 @@ Consiste em uma aplicação web onde há um CRUD de um recurso chamado produto, 
 
 		npm i
 
-2. Uma vez instaladas as dependências, pelo comando abaixo é possível executar o backend da aplicação, por padrão ele estará disponpivel para requisições através da porta 3333 no endereço http://localhost:3333/:
+2. Uma vez instaladas as dependências, pelo comando abaixo é possível executar o backend da aplicação, por padrão ele estará disponível para requisições através da porta 3333 no endereço http://localhost:3333/:
 
 		npm start
 
