@@ -1,8 +1,7 @@
 #**Projeto Loja Virtual**#
 
 
-Consiste em uma aplicação web onde há um CRUD de um recurso chamado produto, toda a interação do usuário com o banco de dados é possível ser feita através de um frontend web.
-
+Consiste em uma aplicação web onde há um CRUD de um recurso chamado produto, que possui nome, descrição e valor, sendo todos os campos de preenchimento obrigatório. Toda a interação do usuário com o banco de dados é possível ser feita através de um frontend web.
 
 **Tecnologias Utilizadas**
 
