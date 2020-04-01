@@ -2,6 +2,7 @@ const request = require('supertest')
 const app = require('../src/app')
 const connection = require('../src/database/connection')
 
+//Testing cases for the product entity
 describe('PRODUCT', () => {
     beforeEach(async () =>  {
         await connection.migrate.rollback()
