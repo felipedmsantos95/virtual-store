@@ -32,7 +32,7 @@ Consiste em uma aplicação web onde há um CRUD de um recurso chamado produto, 
 
 **Testes no Backend:**
 
-1. Para verificar o script de testes que foram feitos no desenvolvimento da aplicação acessar o diretório ./backend/ e executar o comando abaixo:
+1. Para verificar o script dos testes que foram feitos no desenvolvimento da aplicação, acessar o diretório ./backend/ e executar o comando abaixo:
 
 		npm test
 
