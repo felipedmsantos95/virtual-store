@@ -30,8 +30,16 @@ Consiste em uma aplicação web onde há um CRUD de um recurso chamado produto, 
 *	NPM 6.x ou superior
 *	Yarn 1.X ou superior
 
+## Executando o projeto
 
-## Executando Backend
+### Clonando o projeto
+
+```bash
+$ git clone https://github.com/felipedmsantos95/virtual-store
+$ cd virtual-store
+```
+
+### Executando Backend
 
 1. Para rodar a API pela primeira vez, acessar o diretório ./backend/ e executar o comando abaixo para instalar as dependências:
 
@@ -41,14 +49,14 @@ Consiste em uma aplicação web onde há um CRUD de um recurso chamado produto, 
 
 		npm start
 
-## Testes no Backend
+### Testes no Backend
 
 1. Para verificar o script dos testes que foram feitos no desenvolvimento da aplicação, acessar o diretório ./backend/ e executar o comando abaixo:
 
 		npm test
 
 
-## Executando Frontend
+### Executando Frontend
 
 Com o backend sendo executado, pode-se executar os passos abaixo para rodar o frontend da aplicação localmente.
 
