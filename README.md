@@ -17,9 +17,9 @@ Consiste em uma aplicação web onde há um CRUD de um recurso chamado produto, 
 
 ## Tecnologias Utilizadas
 
-*	Para o desenvolvimento do backend foi utilizada a plataforma Node.js baseada na linguagem Javascript
-*	Para o desenvolvimento do frontend foi utilizada a plataforma React.js baseado na linguagem Javascript
-* 	O banco de dados utilizado foi SQLite, por não necessitar de um processo SGBD sendo executado separadamente
+*	Node.js para o backend
+*	React.js para o frontend
+* 	Banco de dados SQLite
 *	Testes foram feitos no backend através do framework Jest 
 
 
